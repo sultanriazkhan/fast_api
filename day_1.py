@@ -6,7 +6,9 @@ app= FastAPI(
 )
 @app.get("/")
 def age():
-    return {"message": "Hello World" , "status": "Running"}
+    return {"app": "FastAPI Practice", "version": "1.0"}
+@app.get("/about")
+def about():   return {"name": "Sultan", "age": 30, "city": "New York"}
 @app.get("/health")
 def health_check():
     return {"status": "healthy", "service": "api"}
